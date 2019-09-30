@@ -10,16 +10,22 @@
  * @return {void} Do not return anything, modify nums in-place instead.
  */
 var moveZeroes = function(nums) {
-   
-  for (var i = 0; i < nums.length; i++) {
-    for (var j = i + 1;  j < nums.length; j++) {
-      if (nums[i] === 0) {
-        var temp = nums[j]
-        nums[j] = nums[i]
-        nums[i] = temp
-      }
-    }
+
+  let countZero = 0; 
+  for (const num of nums) {
+    countZero = num === 0 ? countZero + 1 : countZero
   }
+
+  const arr = nums.filter(num => num !== 0)
+
+  while (countZero--) {
+    arr.push(0)
+  }
+
+  for (var i = 0; i < nums.length; i++) {
+    nums[i] = arr[i]
+  }
+   
 };
 // @lc code=end
 
