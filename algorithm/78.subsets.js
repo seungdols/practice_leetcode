@@ -10,11 +10,9 @@
  * @return {number[][]}
  */
 var subsets = function(nums) {
-  // 왜 ? 빈 값이 들어가지 ?
   var superSet = [];
   function backtrack (nums, start, subset, superSet) {
-    superSet.push(subset);
-    console.log(subset)
+    superSet.push([...subset]);
     for (var i = start; i < nums.length; i++) {
       subset.push(nums[i]);
       backtrack(nums, i + 1, subset, superSet);
