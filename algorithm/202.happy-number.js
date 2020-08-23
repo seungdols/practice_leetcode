@@ -14,7 +14,7 @@ var isHappy = function(n) {
   let memo = []
     while (result !== 1) {
       memo.push(result)
-      const value = JSON.stringify(result).split('')
+      const value = result.toString().split('')
                     .map(v => Math.pow(+v, 2))
                     .reduce((pre, cur) => (pre + cur), 0)
       result = value
