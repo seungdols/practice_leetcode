@@ -17,13 +17,24 @@
  * @return {number}
  */
 var getDecimalValue = function (head) {
-  let node = head
-  const arr = []
-  while (node !== null) {
-    arr.push(node.val)
-    node = node.next
-  }
+  // let node = head
+  // const arr = []
+  // while (node !== null) {
+  //   arr.push(node.val)
+  //   node = node.next
+  // }
 
-  return parseInt(arr.join(""), 2)
+  // return parseInt(arr.join(""), 2)
+
+  // Use bit operator
+  let node = head
+    
+  let num = node.val
+  while (node.next !== null) {
+     num = num << 1 | node.next.val
+     node = node.next
+  }
+  
+  return num
 }
 // @lc code=end
