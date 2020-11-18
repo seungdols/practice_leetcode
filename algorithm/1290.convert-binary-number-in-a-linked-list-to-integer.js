@@ -31,7 +31,7 @@ var getDecimalValue = function (head) {
     
   let num = node.val
   while (node.next !== null) {
-     num = num << 1 | node.next.val
+     num = num << 1 | node.next.val // num = num * 2 + node.next.val 이 방법도 있구나..
      node = node.next
   }
   
