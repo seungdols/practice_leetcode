@@ -18,7 +18,7 @@ var decompressRLElist = function(nums) {
       // for (let j = 0; j < freq; j++) {
       //     result.push(val)
       // }
-      result.push(...Array(freq).fill(val)
+      result.push(...Array(freq).fill(val))
   }
   return result
 };
