@@ -6,7 +6,6 @@ class Solution {
       var reverted = 0
       while(origin > reverted) {
           reverted = reverted * 10 + origin % 10
-          println(reverted)
           origin = origin / 10
       }
       
