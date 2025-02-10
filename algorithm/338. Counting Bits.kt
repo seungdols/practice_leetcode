@@ -8,6 +8,15 @@ class Solution {
         }
 
         return ans
+
+        // 가장 빠른 코드 해법
+        // val result = IntArray(n + 1)
+        // result[0] = 0
+        // 이전 계산값(i shr 1) + 마지막 비트(i and 1)
+        // for(i in 1..n) {
+        //     result[i] = result[i shr 1] + (i and 1)
+        // }
+        // return result
     }
 
     fun hammingWeight(n: Int): Int {
